@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: 160vh 74vw;
+    overflow: hidden;
+}
+.mario{
+    height: 12vw;
+    width: 12vw;
+    background-size: 29%;
+    position: absolute;
+    top: 55vw;
+    left: 2vw;
+}
+.thanos{
+    height: 12vw;
+    width: 12vw;
+    background-size: 29%;
+    position: absolute;
+    top: 55vw;
+    right: 0;
+}
+.thanosanim{
+    animation: thanosmove 2s infinite ease-in;
+}
+.mariojump{
+    animation: mariojump 1s;
+}
+
+.mariorun{
+    animation: mariorun 2s;
+
+}
+.gamover{
+    visibility: hidden;
+    color: rgb(162, 39, 39);
+    position: absolute;
+    font-size: 3em;
+    text-decoration: underline;
+    display: inline-block;
+    top: 28vw;
+    left: 40vw;
+}   
+.scoreCont{
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+}
+@keyframes thanosmove {
+    0%{
+        right: 0;
+
+    }
+
+    10%{
+        right: 5vw;
+
+    }
+    
+    100%{
+        right: 100vw;
+
+    }
+}
+
+@keyframes mariojump {
+    
+    50%{
+        top: 32vw;
+    }
+    100%{
+        top: 55vw;
+    
+    }
+}
+
+@keyframes mariorun{
+    
+    100%{
+        left: 10vw;
+    }
+}
+
+.game-start{
+    opacity: 0.7;
+    width: 15vw;
+    height: 15vw;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top:14vw;
+    left: 40vw;
+}
+.game{
+    width: 15vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.play{
+    /* visibility: hidden; */
+    transition: all 0.3s ease-in;
+}
+.reload{
+    visibility: hidden;
+    transition: all 0.3s ease-in;
+}
